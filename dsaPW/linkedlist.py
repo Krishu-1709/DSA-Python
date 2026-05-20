@@ -31,9 +31,20 @@ def insertAtStart(head,data):
     temp.next = head
     return temp
 def insertAtLast(head,data):
+    
+    temp = Node(data)
+    if head is None:
+        return temp
+    curr = head
+    while curr.next != None:
+        curr = curr.next
+    curr.next = temp
+    
+
 
 
 def insertAtKIndex(head,k,data):
+    
     curr = head
     temp = Node(data)
     if k ==0:
@@ -47,5 +58,5 @@ def insertAtKIndex(head,k,data):
 
 # head = insertAtStart(a,25)
 # print(head.data)
-insertAtKIndex(a,2,123)
+insertAtLast(a,12)
 printLinkedList(a)
